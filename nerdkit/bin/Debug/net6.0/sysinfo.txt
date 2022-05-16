@@ -1,0 +1,56 @@
+####### SYSTEM INFO ####### 
+
+Host Name:                 DESKTOP-OO517NS
+OS Name:                   Microsoft Windows 10 Pro
+OS Version:                10.0.19044 N/A Build 19044
+OS Manufacturer:           Microsoft Corporation
+OS Configuration:          Standalone Workstation
+OS Build Type:             Multiprocessor Free
+Registered Owner:          Nathan
+Registered Organization:   
+Product ID:                00330-80000-00000-AA666
+Original Install Date:     15/12/2021, 4:51:58 am
+System Boot Time:          16/05/2022, 6:12:22 am
+System Manufacturer:       ASUS
+System Model:              System Product Name
+System Type:               x64-based PC
+Processor(s):              1 Processor(s) Installed.
+                           [01]: Intel64 Family 6 Model 167 Stepping 1 GenuineIntel ~3912 Mhz
+BIOS Version:              American Megatrends Inc. 0820, 27/04/2021
+Windows Directory:         C:\Windows
+System Directory:          C:\Windows\system32
+Boot Device:               \Device\HarddiskVolume2
+System Locale:             en-us;English (United States)
+Input Locale:              en-us;English (United States)
+Time Zone:                 (UTC+12:00) Auckland, Wellington
+Total Physical Memory:     16,218 MB
+Available Physical Memory: 4,841 MB
+Virtual Memory: Max Size:  24,282 MB
+Virtual Memory: Available: 7,958 MB
+Virtual Memory: In Use:    16,324 MB
+Page File Location(s):     C:\pagefile.sys
+                           D:\pagefile.sys
+Domain:                    WORKGROUP
+Logon Server:              \\DESKTOP-OO517NS
+Hotfix(s):                 9 Hotfix(s) Installed.
+                           [01]: KB5013624
+                           [02]: KB5003791
+                           [03]: KB5013942
+                           [04]: KB5006753
+                           [05]: KB5007273
+                           [06]: KB5011352
+                           [07]: KB5011651
+                           [08]: KB5014032
+                           [09]: KB5005699
+Network Card(s):           1 NIC(s) Installed.
+                           [01]: Intel(R) Ethernet Connection (14) I219-V
+                                 Connection Name: Ethernet
+                                 DHCP Enabled:    Yes
+                                 DHCP Server:     192.168.1.1
+                                 IP address(es)
+                                 [01]: 192.168.1.4
+                                 [02]: fe80::64df:a853:707c:914e
+Hyper-V Requirements:      VM Monitor Mode Extensions: Yes
+                           Virtualization Enabled In Firmware: No
+                           Second Level Address Translation: Yes
+                           Data Execution Prevention Available: Yes
