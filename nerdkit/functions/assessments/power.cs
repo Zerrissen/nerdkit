@@ -4,7 +4,7 @@ using Sharprompt;
 
 namespace nerdkit.functions.assessments
 {
-    internal class repair
+    internal class power
     {
         public static void controller()
         {
@@ -21,19 +21,19 @@ namespace nerdkit.functions.assessments
             // Check with a simple condition whether you are admin or not and if True, scan with SFC
             if (isAdmin)
             {
-                var option = Prompt.MultiSelect("", new[] { "DISM CheckHealth", "DISM ScanHealth", "DISM RestoreHealth" });
+                var option = Prompt.MultiSelect("", new[] { "Generate Efficiency Report", "Generate System Power Report", "Get Battery Report (Laptop Only)" });
                 foreach (var item in option)
                 {
                     switch (item)
                     {
-                        case "DISM CheckHealth":
-                            checkhealth();
+                        case "Generate Efficiency Report":
+                            efficiency();
                             break;
-                        case "DISM ScanHealth":
-                            scanhealth();
+                        case "Generate System Power Report":
+                            systempower();
                             break;
-                        case "DISM RestoreHealth":
-                            restorehealth();
+                        case "Get Battery Report (Laptop Only)":
+                            battery();
                             break;
                     }
                 }
@@ -43,20 +43,20 @@ namespace nerdkit.functions.assessments
 
             else
             {
-                logger.Out("Run program as Administrator to scan or repair OS with DISM.");
+                logger.Out("Run program as Administrator to generate power reports.");
                 logger.Out("Press any key to exit..");
                 Console.ReadKey();
             }
         }
 
-        public static void checkhealth()
+        public static void efficiency()
         {
             // Create new System Diagnostic process
             Process process = new Process();
             ProcessStartInfo startInfo = process.StartInfo;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C DISM /online /cleanup-image /checkhealth";
+            startInfo.Arguments = "/C powercfg /energy > nul 2>&1";
             process.StartInfo = startInfo;
 
             // Start logger
@@ -70,21 +70,23 @@ namespace nerdkit.functions.assessments
             // Finish logger calls
             Console.WriteLine();
             logger.Log("Completed", "Run CheckHealth");
+
+            Process.Start("C:/Windows/System32/energy-report.html");
         }
 
-        public static void scanhealth()
+        public static void systempower()
         {
             // Create new System Diagnostic process
             Process process = new Process();
             ProcessStartInfo startInfo = process.StartInfo;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C DISM /online /cleanup-image /scanhealth";
+            startInfo.Arguments = "/C powercfg /systempowerreport > nul 2>&1";
             process.StartInfo = startInfo;
 
             // Start logger
             Console.WriteLine();
-            logger.Log("Started", "Run ScanHealth");
+            logger.Log("Started", "Run SystemPowerReport");
 
             // Start Test
             process.Start();
@@ -92,28 +94,34 @@ namespace nerdkit.functions.assessments
 
             // Finish logger calls
             Console.WriteLine();
-            logger.Log("Completed", "Run ScanHealth");
+            logger.Log("Completed", "Run SystemPowerReport");
+
+            Process.Start("C:/Windows/System32/sleepstudy-report.html");
         }
 
-        public static void restorehealth()
+        public static void battery()
         {
             // Create new System Diagnostic process
             Process process = new Process();
             ProcessStartInfo startInfo = process.StartInfo;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C DISM /online /cleanup-image /restorehealth";
+            startInfo.Arguments = "/C powercfg /batteryreport > nul 2>&1";
             process.StartInfo = startInfo;
 
             // Start logger
-            logger.Log("Started", "Run RestoreHealth");
+            Console.WriteLine();
+            logger.Log("Started", "Run BatteryReport");
 
             // Start Test
             process.Start();
             process.WaitForExit();
 
             // Finish logger calls
-            logger.Log("Completed", "Run RestoreHealth");
+            Console.WriteLine();
+            logger.Log("Completed", "Run BatteryReport");
+
+            Process.Start("C:/Windows/System32/battery-report.html");
         }
     }
 }

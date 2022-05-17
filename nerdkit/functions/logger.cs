@@ -13,7 +13,7 @@
 
         public static void Out(string one)
         {
-            Console.ForegroundColor = ConsoleColor.Gray; Console.Write(DateTime.Now.ToString() + " ");
+            Console.ForegroundColor = ConsoleColor.Gray; Console.Write("\n" + DateTime.Now.ToString() + " ");
             Console.ForegroundColor = ConsoleColor.Red; Console.Write("["); Console.ForegroundColor = ConsoleColor.Gray; Console.Write("+");
             Console.ForegroundColor = ConsoleColor.Red; Console.Write("]"); Console.ForegroundColor = ConsoleColor.White; Console.Write(" - "); Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine(one);

@@ -9,7 +9,7 @@ namespace nerdkit.functions
             while (true)
             {
                 nerdkit.Title();
-                var option = Prompt.Select("Toolbox", new[] { "Generic System Info", "CPU & GPU Info", "Storage Info" , "Scan for Missing/Corrupt Files", "Repair Missing/Corrupt Files", "Back" });
+                var option = Prompt.Select("Toolbox", new[] { "Generic System Info", "CPU & GPU Info", "Storage Info" , "Scan and Repair Missing/Corrupt Files", "Repair Windows 10 Image", "Battery/Power Test", "Back" });
                 switch (option)
                 {
                     case "Generic System Info":
@@ -19,13 +19,16 @@ namespace nerdkit.functions
                         assessments.cpugpu.controller();
                         break;
                     case "Storage Info":
-                        assessments.storage.getinfo();
+                        assessments.storage.controller();
                         break;
-                    case "Scan for Missing/Corrupt Files":
-                        assessments.sfc.scan();
+                    case "Scan and Repair Missing/Corrupt Files":
+                        assessments.sfc.controller();
                         break;
-                    case "Repair Missing/Corrupt Files":
-                        assessments.repair.start();
+                    case "Repair Windows 10 Image":
+                        assessments.repair.controller();
+                        break;
+                    case "Battery/Power Test":
+                        assessments.power.controller();
                         break;
                     case "Back":
                         break;
