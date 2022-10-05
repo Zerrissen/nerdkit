@@ -1,4 +1,4 @@
-# nerdkit - Personal Troubleshooting Toolkit ![GitHub release (latest by date)](https://img.shields.io/github/v/release/nerdkit/strial?style=flat-square) ![Open issues (latest by date)](https://img.shields.io/github/issues/Zerrissen/nerdkit?style=flat-square)
+# nerdkit - Personal Troubleshooting Toolkit ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Zerrissen/nerdkit?style=flat-square) ![Open issues (latest by date)](https://img.shields.io/github/issues/Zerrissen/nerdkit?style=flat-square)
 ###### This is a tool developed purely for my own learning and fun purposes, and is not intended for commercial use. Use at your own risk. ######
 
 ## Installation
