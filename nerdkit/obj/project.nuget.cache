@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OCvDN9hylXHWuOnhV3+Jk8Gj+mE5WXC9WFC7Pquey5+AkR2/+kKtVv7BhjZa8d8fnIdPpamHIDkVBmmGeQ4p/w==",
+  "dgSpecHash": "s/+aVS3Ti82CaSejIf6U1z1pW7HYJRv2yGKzHOdWeHCM+P3Zx1p7SY3G+jbhAEj+7TvmtPE/YgQomQr4ZpfYaw==",
   "success": true,
-  "projectFilePath": "D:\\Storage\\Documents - Storage Disk\\Stuff\\Github\\nerdkit\\nerdkit\\nerdkit.csproj",
+  "projectFilePath": "C:\\Users\\Nathan\\Downloads\\nerdkit-main\\nerdkit-main\\nerdkit\\nerdkit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nathan\\.nuget\\packages\\sharprompt\\2.4.1\\sharprompt.2.4.1.nupkg.sha512",
     "C:\\Users\\Nathan\\.nuget\\packages\\system.codedom\\7.0.0-preview.4.22229.4\\system.codedom.7.0.0-preview.4.22229.4.nupkg.sha512",

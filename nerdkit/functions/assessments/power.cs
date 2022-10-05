@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using System.Security.Principal;
+using System.IO;
 using Sharprompt;
+using System.IO.Enumeration;
 
 namespace nerdkit.functions.assessments
 {
@@ -53,11 +55,12 @@ namespace nerdkit.functions.assessments
         {
             // Create new System Diagnostic process
             Process process = new Process();
-            ProcessStartInfo startInfo = process.StartInfo;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C powercfg /energy > nul 2>&1";
-            process.StartInfo = startInfo;
+            process.StartInfo = new ProcessStartInfo(@"C:/Windows/System32/cmd.exe")
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                FileName = "cmd.exe",
+                Arguments = "/C cd reports & powercfg /energy > nul 2>&1"
+            };
 
             // Start logger
             Console.WriteLine();
@@ -71,18 +74,24 @@ namespace nerdkit.functions.assessments
             Console.WriteLine();
             logger.Log("Completed", "Run CheckHealth");
 
-            Process.Start("C:/Windows/System32/energy-report.html");
+            Process process2 = new Process();
+            process2.StartInfo = new ProcessStartInfo(@"reports\energy-report.html")
+            {
+                UseShellExecute = true
+            };
+            process2.Start();
         }
 
         public static void systempower()
         {
             // Create new System Diagnostic process
             Process process = new Process();
-            ProcessStartInfo startInfo = process.StartInfo;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C powercfg /systempowerreport > nul 2>&1";
-            process.StartInfo = startInfo;
+            process.StartInfo = new ProcessStartInfo(@"C:/Windows/System32/cmd.exe")
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                FileName = "cmd.exe",
+                Arguments = "/C cd reports & powercfg /systempowerreport > nul 2>&1"
+            };
 
             // Start logger
             Console.WriteLine();
@@ -96,18 +105,24 @@ namespace nerdkit.functions.assessments
             Console.WriteLine();
             logger.Log("Completed", "Run SystemPowerReport");
 
-            Process.Start("C:/Windows/System32/sleepstudy-report.html");
+            Process process2 = new Process();
+            process2.StartInfo = new ProcessStartInfo(@"reports\sleepstudy-report.html")
+            {
+                UseShellExecute = true
+            };
+            process2.Start();
         }
 
         public static void battery()
         {
             // Create new System Diagnostic process
             Process process = new Process();
-            ProcessStartInfo startInfo = process.StartInfo;
-            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-            startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C powercfg /batteryreport > nul 2>&1";
-            process.StartInfo = startInfo;
+            process.StartInfo = new ProcessStartInfo(@"C:/Windows/System32/cmd.exe")
+            {
+                WindowStyle = ProcessWindowStyle.Hidden,
+                FileName = "cmd.exe",
+                Arguments = "/C cd reports & powercfg /batteryreport > nul 2>&1"
+            };
 
             // Start logger
             Console.WriteLine();
@@ -121,7 +136,12 @@ namespace nerdkit.functions.assessments
             Console.WriteLine();
             logger.Log("Completed", "Run BatteryReport");
 
-            Process.Start("C:/Windows/System32/battery-report.html");
+            Process process2 = new Process();
+            process2.StartInfo = new ProcessStartInfo(@"reports\battery-report.html")
+            {
+                UseShellExecute = true
+            };
+            process2.Start();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace nerdkit.functions.assessments
             ProcessStartInfo startInfo = process.StartInfo;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C echo ####### HOSTNAME #######>> nettest_log.txt & hostname >> nettest_log.txt";
+            startInfo.Arguments = "/C echo ####### HOSTNAME #######>> nettest_log.txt & hostname >> reports/nettest_log.txt";
             process.StartInfo = startInfo;
 
             // Start logger
@@ -23,7 +23,6 @@ namespace nerdkit.functions.assessments
 
             // Finish logger calls
             logger.Log("Completed", "Get Hostname");
-            Thread.Sleep(1000);
         }
 
         public static void getmac()
@@ -33,7 +32,7 @@ namespace nerdkit.functions.assessments
             ProcessStartInfo startInfo = process.StartInfo;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C echo. >> nettest_log.txt & echo | set /p=####### MAC ####### >> nettest_log.txt & getmac >> nettest_log.txt";
+            startInfo.Arguments = "/C echo. >> nettest_log.txt & echo | set /p=####### MAC ####### >> nettest_log.txt & getmac >> reports/nettest_log.txt";
             process.StartInfo = startInfo;
 
             // Start logger
@@ -45,7 +44,6 @@ namespace nerdkit.functions.assessments
 
             // Finish logger calls
             logger.Log("Completed", "Get MAC");
-            Thread.Sleep(1000);
         }
 
         public static void pathping()
@@ -55,7 +53,7 @@ namespace nerdkit.functions.assessments
             ProcessStartInfo startInfo = process.StartInfo;
             startInfo.WindowStyle = ProcessWindowStyle.Hidden;
             startInfo.FileName = "cmd.exe";
-            startInfo.Arguments = "/C echo. >> nettest_log.txt & echo | set /p=####### Path Ping ####### >> nettest_log.txt & pathping 8.8.8.8 >> nettest_log.txt";
+            startInfo.Arguments = "/C echo. >> nettest_log.txt & echo | set /p=####### Path Ping ####### >> nettest_log.txt & pathping 8.8.8.8 >> reports/nettest_log.txt";
             process.StartInfo = startInfo;
 
             // Start logger
@@ -67,7 +65,6 @@ namespace nerdkit.functions.assessments
 
             // Finish logger calls
             logger.Log("Completed", "Path Ping\n");
-            Thread.Sleep(1000);
         }
 
         public static void controller()
@@ -77,14 +74,21 @@ namespace nerdkit.functions.assessments
             Thread macThr = new Thread(getmac);
             Thread pingThr = new Thread(pathping);
 
-            // Start threads, 100ms gap between threads to stop functions overwriting prints!
+            // Start threads, 150ms gap between threads to stop functions overwriting prints!
             hostThr.Start();
-            Thread.Sleep(100);
+            Thread.Sleep(1000);
             macThr.Start();
-            Thread.Sleep(150);
+            Thread.Sleep(1000);
             pingThr.Start();
             pingThr.Join();
             Thread.Sleep(1000);
+
+            Process process = new Process();
+            process.StartInfo = new ProcessStartInfo(@"reports\nettest_log.txt")
+            {
+                UseShellExecute = true
+            };
+            process.Start();
         }
     }
 }

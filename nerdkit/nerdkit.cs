@@ -33,7 +33,7 @@ namespace nerdkit
                     while (flag == 0)
                     {
                         Title();
-                        var option2 = Prompt.Select("Toolbox", new[] { "Networking", "Hardware", "Software", "Back" });
+                        var option2 = Prompt.Select("Toolbox", new[] { "Networking", "Hardware", "Back" });
                         switch (option2)
                         {
                             case "Networking":
@@ -41,9 +41,6 @@ namespace nerdkit
                                 break;
                             case "Hardware":
                                 functions.hardware.menu();
-                                break;
-                            case "Software":
-                                functions.software.menu();
                                 break;
                             case "Back":
                                 flag = 1;

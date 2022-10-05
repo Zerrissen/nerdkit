@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Storage\\Documents - Storage Disk\\Stuff\\Github\\nerdkit\\nerdkit\\nerdkit.csproj": {}
+    "C:\\Users\\Nathan\\Downloads\\nerdkit-main\\nerdkit-main\\nerdkit\\nerdkit.csproj": {}
   },
   "projects": {
-    "D:\\Storage\\Documents - Storage Disk\\Stuff\\Github\\nerdkit\\nerdkit\\nerdkit.csproj": {
+    "C:\\Users\\Nathan\\Downloads\\nerdkit-main\\nerdkit-main\\nerdkit\\nerdkit.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Storage\\Documents - Storage Disk\\Stuff\\Github\\nerdkit\\nerdkit\\nerdkit.csproj",
+        "projectUniqueName": "C:\\Users\\Nathan\\Downloads\\nerdkit-main\\nerdkit-main\\nerdkit\\nerdkit.csproj",
         "projectName": "nerdkit",
-        "projectPath": "D:\\Storage\\Documents - Storage Disk\\Stuff\\Github\\nerdkit\\nerdkit\\nerdkit.csproj",
+        "projectPath": "C:\\Users\\Nathan\\Downloads\\nerdkit-main\\nerdkit-main\\nerdkit\\nerdkit.csproj",
         "packagesPath": "C:\\Users\\Nathan\\.nuget\\packages\\",
-        "outputPath": "D:\\Storage\\Documents - Storage Disk\\Stuff\\Github\\nerdkit\\nerdkit\\obj\\",
+        "outputPath": "C:\\Users\\Nathan\\Downloads\\nerdkit-main\\nerdkit-main\\nerdkit\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Nathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -55,7 +55,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

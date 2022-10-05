@@ -1,0 +1,9 @@
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\nerdkit.exe
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\nerdkit.dll
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\nerdkit.deps.json
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\nerdkit.runtimeconfig.json
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\nerdkit.pdb
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\Sharprompt.dll
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\System.CodeDom.dll
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\System.Management.dll
+C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\runtimes\win\lib\net6.0\System.Management.dll
