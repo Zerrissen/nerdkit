@@ -30,3 +30,6 @@ Note that some tools such as NetTest output results to a log file found in the r
 
 ## Still confused?
 Then you're a little simple. Just give it a run, I promise it's not that complicated.
+
+## Credit
+Credit is absolutely due to shibayan for providing Sharprompt, the TUI API that I have used that acts as the backbone of the entire project. Check out their Github repository for the project here: https://github.com/shibayan/Sharprompt
