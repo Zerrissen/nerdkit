@@ -1,2 +1,0 @@
-C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\win-x64\nerdkit.pdb
-C:\Users\Nathan\Downloads\nerdkit-main\nerdkit-main\nerdkit\bin\Release\net6.0\publish\win-x64\nerdkit.exe

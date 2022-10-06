@@ -1,9 +1,28 @@
 ﻿using Sharprompt;
+using System.IO;
 
 namespace nerdkit
 {
     class nerdkit
     {
+        private static void Setup()
+        {
+            try 
+            {
+                if (!Directory.Exists("reports"))
+                {
+                    Console.WriteLine("Reports directory missing : Creating directory");
+                    Directory.CreateDirectory("reports");
+                    Console.WriteLine("Directory created");
+                }
+            }
+            catch (Exception e)
+            { 
+                Console.WriteLine("Process failed: {0}", e.ToString());
+            }
+            finally {}
+            
+        }
         public static void Title()
         {
             Console.Clear();
@@ -22,7 +41,10 @@ namespace nerdkit
         {
             Console.Title = "NerdKit";
 
-            // Menu Selection
+            // Call directory check
+            Setup();
+
+            // Start Menu Selection
             while (true)
             {
                 Title();
