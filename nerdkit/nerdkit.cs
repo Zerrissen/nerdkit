@@ -34,7 +34,7 @@ namespace nerdkit
  |  \_| |______ |    \_ |_____/ |    \_ __|__    |  ";
             Console.WriteLine(title);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("\nMade by Zerrissen\t\t\t    v1.0.0");
+            Console.WriteLine("\nMade by Zerrissen\t\t\t    v1.0.1");
             Console.WriteLine("https://github.com/Zerrissen\n\n");
         }
         public static void Main()
