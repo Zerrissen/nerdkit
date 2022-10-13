@@ -1,7 +1,7 @@
 ﻿using System.Management;
 using Microsoft.Win32;
 
-namespace nerdkit.functions.assessments
+namespace nerdkit.functions.assessments.Hardware
 {
     internal class sysinfo
     {

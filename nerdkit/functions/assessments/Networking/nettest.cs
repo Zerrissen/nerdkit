@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace nerdkit.functions.assessments
+namespace nerdkit.functions.assessments.Networking
 {
     internal class nettest
     {

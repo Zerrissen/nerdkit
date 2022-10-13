@@ -1,7 +1,7 @@
 ﻿using System.Management;
 using Microsoft.Win32;
 
-namespace nerdkit.functions.assessments
+namespace nerdkit.functions.assessments.Hardware
 {
     internal class cpugpu
     {
@@ -41,7 +41,7 @@ namespace nerdkit.functions.assessments
             const string localRoot = "HKEY_LOCAL_MACHINE";
             const string SubKey = "\\SYSTEM\\ControlSet001\\Control\\Class\\{4d36e968-e325-11ce-bfc1-08002be10318}\\0001";
             const string keyName = localRoot + SubKey;
-            long gpuMem = ((Convert.ToInt64(Registry.GetValue(keyName, "HardwareInformation.qwMemorySize", null))) / 1024) / 1024;
+            long gpuMem = Convert.ToInt64(Registry.GetValue(keyName, "HardwareInformation.qwMemorySize", null)) / 1024 / 1024;
 
             // Get the rest of the information for VideController and print.
             ManagementObjectSearcher myVideoObject = new ManagementObjectSearcher("select * from Win32_VideoController");

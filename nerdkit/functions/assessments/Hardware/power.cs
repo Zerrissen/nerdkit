@@ -4,7 +4,7 @@ using System.IO;
 using Sharprompt;
 using System.IO.Enumeration;
 
-namespace nerdkit.functions.assessments
+namespace nerdkit.functions.assessments.Hardware
 {
     internal class power
     {

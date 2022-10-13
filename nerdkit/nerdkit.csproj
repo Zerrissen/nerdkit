@@ -13,8 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Sharprompt" Version="2.4.1" />
+    <PackageReference Include="Sharprompt" Version="2.4.5" />
     <PackageReference Include="System.Management" Version="7.0.0-preview.4.22229.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="functions\assessments\Software\" />
   </ItemGroup>
 
 </Project>

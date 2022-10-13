@@ -59,10 +59,10 @@ namespace nerdkit
                         switch (option2)
                         {
                             case "Networking":
-                                functions.networking.menu();
+                                functions.menus.networking.menu();
                                 break;
                             case "Hardware":
-                                functions.hardware.menu();
+                                functions.menus.hardware.menu();
                                 break;
                             case "Back":
                                 flag = 1;

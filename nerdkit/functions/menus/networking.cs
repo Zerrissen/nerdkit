@@ -1,6 +1,6 @@
 ﻿using Sharprompt;
 
-namespace nerdkit.functions
+namespace nerdkit.functions.menus
 {
     internal class networking
     {
@@ -17,7 +17,7 @@ namespace nerdkit.functions
                     // Local network port scanning via nmap?
                     // netstat to show current connections
                     case "NetTest":
-                        assessments.nettest.controller();
+                        assessments.Networking.nettest.controller();
                         break;
                     case "Back":
                         break;

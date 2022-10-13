@@ -1,7 +1,7 @@
 ﻿using System.Management;
 using System.Security.Principal;
 
-namespace nerdkit.functions.assessments
+namespace nerdkit.functions.assessments.Hardware
 {
     internal class storage
     {
@@ -32,13 +32,15 @@ namespace nerdkit.functions.assessments
                 var searcher = new ManagementObjectSearcher("Select * from Win32_DiskDrive");
                 searcher.Scope = new ManagementScope(@"\root\wmi");
                 searcher.Query = new ObjectQuery("Select * from MSStorageDriver_FailurePredictStatus");
- /*               Console.WriteLine("\nS.M.A.R.T Failure Prediction");
-                foreach (ManagementObject data in searcher.Get())
-                {
-                    Console.WriteLine("SMART Instance Name: " + data.GetPropertyValue("InstanceName").ToString());
-                    Console.WriteLine("SMART Predicts Failure: " + data.GetPropertyValue("PredictFailure").ToString());
-                    Console.WriteLine("SMART Failure Reason: " + data.GetPropertyValue("Reason").ToString());
-                }*/
+                /*             
+                               Console.WriteLine("\nS.M.A.R.T Failure Prediction");
+                               foreach (ManagementObject data in searcher.Get())
+                               {
+                                   Console.WriteLine("SMART Instance Name: " + data.GetPropertyValue("InstanceName").ToString());
+                                   Console.WriteLine("SMART Predicts Failure: " + data.GetPropertyValue("PredictFailure").ToString());
+                                   Console.WriteLine("SMART Failure Reason: " + data.GetPropertyValue("Reason").ToString());
+                               }
+                */
 
                 foreach (DriveInfo drive in drives)
                 {

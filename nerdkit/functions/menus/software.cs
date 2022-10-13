@@ -1,6 +1,6 @@
 ﻿using Sharprompt;
 
-namespace nerdkit.functions
+namespace nerdkit.functions.menus
 {
     internal class software
     {

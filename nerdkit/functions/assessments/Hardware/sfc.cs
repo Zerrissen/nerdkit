@@ -2,7 +2,7 @@
 using System.Security.Principal;
 using Sharprompt;
 
-namespace nerdkit.functions.assessments
+namespace nerdkit.functions.assessments.Hardware
 {
     internal class sfc
     {
@@ -52,7 +52,7 @@ namespace nerdkit.functions.assessments
                     case "Open Log":
                         if (File.Exists(filePath))
                         {
-                            Process.Start("notepad.exe",filePath);
+                            Process.Start("notepad.exe", filePath);
                         }
                         else
                         {

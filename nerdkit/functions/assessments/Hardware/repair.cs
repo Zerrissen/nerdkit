@@ -2,7 +2,7 @@
 using System.Security.Principal;
 using Sharprompt;
 
-namespace nerdkit.functions.assessments
+namespace nerdkit.functions.assessments.Hardware
 {
     internal class repair
     {
